@@ -1,0 +1,90 @@
+#splash_screen {
+  cursor: pointer;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+#splash_img {
+  height: 100%;
+}
+
+.spybot_profile > img,
+.spybot_profile > div {
+  cursor: pointer;
+}
+
+#load_screen,
+#spybot_screen,
+#game_ui,
+#node_proceed_btn, 
+#battle_result_popup,
+.load_game_btn,
+.del_game_btn,
+.battle-ui {
+  display: none;
+}
+
+.profile {
+  max-height: 200px;
+  /*max-width: 200px;*/
+}
+
+.w3-cerulean {
+  background-color: #1C587B;
+}
+
+
+/* Store */
+.inventory tr td {
+  padding: 0;
+  cursor: pointer;
+}
+
+.w3-select {
+  overflow-y: auto;
+  border: 0;
+}
+
+#player_program_info {
+  background-color: white;
+  padding: 0 !important;
+}
+
+p[name="description"] {
+  min-height: 100px;
+}
+
+/* Chat */
+
+/* Position the chat box for the tutorial */
+#chat {
+  position: fixed;
+  bottom: 0; /* top: 60% */
+  right: 0;
+}
+
+#avatar {
+  height: 61px;
+  width: 62px;
+}
+
+#username {
+  padding-left: 10px;
+}
+
+#message {
+  min-height: 150px;
+}
+
+/* Settings */
+#settings_btn {
+  color: #868686;
+  cursor: pointer;
+  font-size: 35;
+  padding-right: 10px;
+}
+
+#settings_zoom_reset {
+  padding-left: 20px;
+}

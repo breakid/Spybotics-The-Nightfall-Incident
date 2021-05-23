@@ -1,0 +1,343 @@
+<html>
+<head>
+  <title>Spybotics - The Nightfall Incident</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="assets/css/w3.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.3.css"> <!-- FOR TESTING -->
+  
+  <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+  <!-- Could be loaded as JSON objects via AJAX if run from a web server -->
+  <script type="text/javascript" src="assets/js/node_data.js"></script>
+  <script type="text/javascript" src="assets/js/battle_data.js"></script>
+  <script type="text/javascript" src="assets/js/program_data.js"></script>
+  <script type="text/javascript" src="assets/js/dialog_data.js"></script>
+  <script type="text/javascript" src="assets/js/misc_data.js"></script>
+  
+  <script type="text/javascript" src="assets/js/models.js"></script>
+  <script type="text/javascript" src="assets/js/controllers.js"></script>
+</head>
+<body>
+
+<!-- FOR TESTING 
+<div id="tests">
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.3.3.js"></script>
+  <script src="assets/js/testing/tests.js"></script>
+</div>
+-->
+
+<div id="splash_screen">
+  <img id="splash_img" src="images/Spybotics_the_Nightfall_Incident.jpg" />
+</div>
+
+<div id="load_screen" class="w3-row-padding w3-center w3-margin-top">
+  <div class="w3-col m1 w3-hide-small w3-card-4">
+  &nbsp;
+  </div>
+  <div class="w3-col m2 w3-hide-small w3-card-4 w3-dark-grey">
+    <div id="game1" class="w3-container w3-center">
+      <h3>Game 1</h3>
+      <img id="game1_img" src="" alt="" style="width:100%; max-height:200px">
+      <h5 id="game1_save">Empty</h5>
+
+      <button class="new_game_btn w3-btn-block w3-gray w3-border w3-border-grey w3-hover-dark-grey">New Game</button>
+      <button class="load_game_btn w3-btn w3-gray w3-border w3-border-grey w3-hover-dark-grey">Load Game</button>
+      <button class="del_game_btn w3-btn w3-gray w3-border w3-border-grey w3-hover-dark-grey">Delete</button>
+    </div>
+  </div>
+  <div class="w3-col m2 w3-hide-small w3-card-4">
+  &nbsp; <!-- Spacer -->
+  </div>
+  <div class="w3-col m2 w3-hide-small w3-card-4 w3-dark-grey">
+    <div id="game2" class="w3-container w3-center">
+      <h3>Game 2</h3>
+      <img id="game2_img" src="" alt="" style="width:100%; max-height:200px">
+      <h5 id="game2_save">Empty</h5>
+
+      <button class="new_game_btn w3-btn-block w3-gray w3-border w3-border-grey w3-hover-dark-grey">New Game</button>
+      <button class="load_game_btn w3-btn w3-gray w3-border w3-border-grey w3-hover-dark-grey">Load Game</button>
+      <button class="del_game_btn w3-btn w3-gray w3-border w3-border-grey w3-hover-dark-grey">Delete</button>
+    </div>
+  </div>
+  <div class="w3-col m2 w3-hide-small w3-card-4">
+  &nbsp;
+  </div>
+  <div class="w3-col m2 w3-hide-small w3-card-4 w3-dark-grey">
+    <div id="game3" class="w3-container w3-center">
+      <h3>Game 3</h3>
+      <img id="game3_img" src="" alt="" style="width:100%; max-height:200px">
+      <h5 id="game3_save">Empty</h5>
+
+      <button class="new_game_btn w3-btn-block w3-gray w3-border w3-border-grey w3-hover-dark-grey">New Game</button>
+      <button class="load_game_btn w3-btn w3-gray w3-border w3-border-grey w3-hover-dark-grey">Load Game</button>
+      <button class="del_game_btn w3-btn w3-gray w3-border w3-border-grey w3-hover-dark-grey">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div id="spybot_screen" class="w3-row-padding w3-center w3-margin-top">
+  <div class="spybot_profile w3-col m3 w3-hide-small" data-spybot="Gigamesh G60">
+    <img src="images/spybots/Gigamesh G60.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <p>Gigamesh G60</p>
+    </div>
+  </div>
+  
+  <div class="spybot_profile w3-col m3 w3-hide-small" data-spybot="Shadowstrike S70">
+    <img src="images/spybots/Shadowstrike S70.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <p>Shadowstrike S70</p>
+    </div>
+  </div>
+  
+  <div class="spybot_profile w3-col m3 w3-hide-small" data-spybot="Snaptrax S45">
+    <img src="images/spybots/Snaptrax S45.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <p>Snaptrax S45</p>
+    </div>
+  </div>
+  
+  <div class="spybot_profile w3-col m3 w3-hide-small" data-spybot="Technojaw T55">
+    <img src="images/spybots/Technojaw T55.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <p>Technojaw T55</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div id="game_ui">
+  <ul id="navbar" class="w3-navbar w3-light-grey w3-bottombar">
+    <!--<li style="margin-left: 30px; padding: 0 10px; background-color: #1c587b; color: white;">databattle in progress</li>-->
+    <li class="w3-right"><i id="settings_btn" class="fa fa-cog"></i></li>
+    <li class="w3-right"><a id="log_out" class="battle-ui w3-btn w3-grey">Log Out</a></li>
+    <li id="credit_display" class="w3-right w3-navitem">Credits: <span id="credits"></span></li>
+  </ul>
+
+  <div class="w3-row-padding w3-margin-top">
+    <div id="sidebar" class="w3-col" style="width: 250px;">
+      <div class="w3-card-4" style="padding-bottom: 12px;">
+        <header class="w3-container w3-light-grey">
+          <h6 id="spybot_name">Spybot</h6>
+        </header>
+        
+        <div class="w3-center">
+          <img id="spybot_profile" class="w3-image profile" src="" alt="">
+        </div>
+      </div>
+
+      <div id="program_list" class="w3-card-4 w3-padding-8">
+        <div class="w3-container w3-light-grey">
+          <h6>Program.List</h6>
+        </div>
+        <select id="player_inventory" class="w3-select" size=8></select>
+      </div>
+
+      <div id="player_program_info" class="w3-card-4 w3-padding-8">
+        <div class="w3-container w3-light-grey">
+          <h6>Program.Info</h6>
+        </div>
+        <div class="w3-row">
+          <div class="w3-container w3-quarter w3-margin-top">
+            <img name="program_image" src="" />
+          </div>
+          <div class="w3-container w3-rest">
+            <div>Move: <span name="move"></span></div>
+            <div>Max Size: <span name="max_size"></span></div>
+            <div name="curr_size"></div>
+          </div>
+        </div>
+        <div class="w3-container w3-row">
+          <h4 name="program_name"></h4>
+          <h5>Commands</h5>
+        </div>
+        <div name="commands" class="w3-btn-group"></div>
+        <p name="description" class="w3-container"></p>
+        <button id="undo" class="battle-ui w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">Undo</button>
+        <div class="battle-ui w3-btn-group">
+          <button id="upload" class="battle-ui w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">Upload</button>
+          <button id="start_battle" class="battle-ui w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">Start Battle</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-rest w3-center">
+      <canvas id="netmap" width="1600" height="800"></canvas>
+      <canvas id="battle_screen" class="battle-ui" width="800" height="500" style="background: url('images/source-code_blog.jpg')"></canvas>
+      <dir id="battle_splash_screen" class="battle-ui"></dir>
+    </div>
+  </div>
+
+
+  <div id="store" class="w3-modal">
+    <div class="w3-modal-content w3-card-8 w3-container w3-light-grey w3-animate-zoom" style="max-width:600px">
+      <div class="w3-container w3-half">
+        <div class="w3-container w3-light-grey">
+          <h6>warez.node</h6>
+        </div>
+        <select id="store_inventory" class="w3-select" size=15></select>
+        <div class="w3-container w3-row">
+          <div class="w3-btn-group">
+            <button id="store_buy" class="w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">Buy</button>
+            <button id="store_done" class="w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">Done</button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="store_program_info" class="w3-container w3-half">
+        <div class="w3-container w3-light-grey">
+          <h6>Program.Info</h6>
+        </div>
+        <div class="w3-row">
+          <div class="w3-container w3-quarter w3-margin-top">
+            <img name="program_image" src="" />
+          </div>
+          <div class="w3-container w3-rest">
+            <div>Move: <span name="move"></span></div>
+            <div>Max Size: <span name="max_size"></span></div>
+          </div>
+        </div>
+        <div class="w3-container w3-row">
+          <h4 name="program_name"></h4>
+          <h5>Commands</h5>
+        </div>
+        <div name="commands" class="w3-btn-group"></div>
+        <p name="description" class="w3-container"></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="chat" class="w3-modal"> <!-- class="w3-modal" (removed so player can interact with battle during tutorial) -->
+    <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+      <!--<span onclick="document.getElementById('chat').style.display='none'" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close Modal">&times;</span>-->
+    
+      <div class="w3-container w3-light-grey">
+        <h5>Message</h5>
+      </div>
+      
+      <div id="user" class="w3-bottombar">
+        <img id="avatar" src="" /><span id="username"></span>
+      </div>
+      <div id="message" class="w3-container"></div>
+      <div id="responses"></div>
+    </div>
+  </div>
+
+
+  <div id="node_info_popup" class="w3-modal">
+    <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+      <!--<span onclick="$('#node_info_popup').hide()" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close Modal">&times;</span>-->
+    
+      <div class="w3-container w3-light-grey">
+        <h5>node.info</h5>
+      </div>
+      <div id="node_info" class="w3-container">
+        <div class="w3-panel"><h3 id="node_company"></h3></div>
+        <div class="w3-panel" id="node_name"></div>
+        <div class="w3-panel">Security Level: <span id="node_level"></span></div>
+        <div class="w3-panel" id="node_credits"></div>
+        <div class="w3-panel" id="node_mission"></div>
+        <div class="w3-panel" id="node_desc"></div>
+      </div>
+      <div class="w3-btn-group">
+        <button id="node_databattle_btn" class="w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">Enter Databattle</button>
+        <button id="node_shop_btn" class="w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">Enter Warez Node</button>
+        <button id="node_enter_smart_btn" class="w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">Enter S.M.A.R.T. Node</button>
+        <button id="node_cancel_btn" class="w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">Cancel</button>
+        <button id="node_proceed_btn" class="w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">Proceed</button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="smart_hq_popup" class="w3-modal">
+    <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+      <!--<span onclick="document.getElementById('chat').style.display='none'" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close Modal">&times;</span>-->
+    
+      <div class="w3-container w3-light-grey">
+        <h5>S.M.A.R.T. HQ</h5>
+      </div>
+      
+      <div class="w3-container">
+        <p>
+          As a S.M.A.R.T. agent, your job is to hunt down crime and problems throughout the net.
+        </p>
+        <p>
+          Use the arrows to scroll around the netmap. Click a node to examine it. Fight databattle against corporate security software to gain control over nodes and open up more areas of the map to explore. Winning databattles earns you credits that you can use to purchase new programs.
+        </p>
+      </div>
+      <div class="w3-container w3-row">
+        <div class="w3-btn-group">
+          <button id="smart_node_done" class="w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="battle_result_popup" class="w3-modal">
+    <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+      <!--<span onclick="$('#battle_result_popup').hide()" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close Modal">&times;</span>-->
+    
+      <div class="w3-container w3-light-grey">
+        <h5>databattle.result</h5>
+      </div>
+      <div id="battle_result" class="w3-container">
+        <div class="w3-panel">DATABATTLE <span id="battle_result"></span></div>
+        <div class="w3-panel">MISSION CREDITS AWARDED: <span id="mission_credits"></span></div>
+        <div class="w3-panel">EXTRA CREDITS AWARDED: <span id="extra_credits"></span></div>
+      </div>
+          <div class="w3-btn-group">
+        <button id="battle_result_logout" class="w3-btn-block w3-cerulean w3-text-white w3-border w3-border-grey w3-hover-cyan">LOG OUT</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="settings" class="w3-modal">
+    <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+      <span onclick="$('#settings').hide()" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close Modal">&times;</span>
+    
+      <div class="w3-container w3-light-grey">
+        <h5>Settings</h5>
+      </div>
+      <div class="w3-container">
+        <div class="w3-panel">
+          <label for="settings_theme">Theme</label>
+          <select id="settings_theme" class="w3-select w3-border" name="option">
+            <option value="light" selected>Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+          
+        <div class="w3-panel">
+          <label for="settings_map_pan">Map Pan</label>
+          <select id="settings_map_pan" class="w3-select w3-border" name="option">
+            <option value="keyboard" selected>Keyboard Only</option>
+            <option value="mouse">Mouse and Keyboard</option>
+          </select>
+        </div>
+          
+        <div class="w3-panel">
+          <input id="settings_zoom" class="w3-check" type="checkbox">
+          <label for="settings_zoom" class="w3-validate">Zoom Enabled</label>
+          <a id="settings_zoom_reset" href="#">Reset zoom</a>
+        </div>
+        
+        <div class="w3-panel">
+          <input id="settings_friendly_fire" class="w3-check" type="checkbox">
+          <label for="settings_friendly_fire" class="w3-validate">Friendly-fire Enabled</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
