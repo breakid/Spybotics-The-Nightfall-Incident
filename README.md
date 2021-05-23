@@ -19,7 +19,7 @@ For those who want to play the original game, [here](https://www.rockraidersunit
 All rights to the code itself belong to me, while all trademarks and game content belongs to the respective IP rights owners.
 
 ## Code
-    Copyright (C) 2021 breakid
+    Copyright (C) 2021 Dan Breakiron
     
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -150,7 +150,7 @@ Nearly everything works when running locally; however, some features may require
 
 
 
-# Know Bugs / Future Work
+# Known Bugs / Future Work
 - Interface
   - Databattle splash screen
   - Databattle logout confirmation dialog
