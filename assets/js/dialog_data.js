@@ -620,7 +620,7 @@ GAME_DATA.DIALOG = {
 
   // Plays after Node: "COMMUNICATIONS HUB"
   '2000': {
-    'speaker': 'Joana Boaventura',
+    'speaker': 'JOANA BOAVENTURA',
     'message': "HELLO, AGENT. I SUPPOSE I SHOULD THANK YOU FOR ASSISTING MY COMPANY",
     'responses': [2001, 2002]
   },
@@ -635,7 +635,7 @@ GAME_DATA.DIALOG = {
     'responses': [2003]
   },
   '2003': {
-    'speaker': 'Joana Boaventura',
+    'speaker': 'JOANA BOAVENTURA',
     'message': "GOOD TO SEE THAT S.M.A.R.T. IS FULFILLING ITS PROFESSIONAL RESPONSIBILIES. ALONG THOSE LINES, I HAVE A TASK FOR YOU TO PERFORM",
     'responses': [2004, 2005]
   },
@@ -650,7 +650,7 @@ GAME_DATA.DIALOG = {
     'responses': [2400]
   },
   '2006': {
-    'speaker': 'Joana Boaventura',
+    'speaker': 'JOANA BOAVENTURA',
     'message': "THE SYSADMIN ARCHIVES HAVE BEEN LOCKED DOWN AFTER AN ABORTED CRASH ATTEMPT. ITS GOING TO TAKE US A WHILE TO GET IT UP AND RUNNING, BUT WE NEED A FILE FROM THERE YESTERDAY",
     'responses': [2007]
   },
@@ -660,7 +660,7 @@ GAME_DATA.DIALOG = {
     'responses': [2008]
   },
   '2008': {
-    'speaker': 'Joana Boaventura',
+    'speaker': 'JOANA BOAVENTURA',
     'message': "WE NEED YOU TO GET THAT FILE. I HAVE A BACKDOOR ROUTE PLOTTED OUT THROUGH A P.E.D. NODE. IF YOU SUCCEED, YOU GET AN EXPERIMENTAL PIECE OF SOFTWARE",
     'responses': [2009, 2010]
   },
@@ -675,7 +675,7 @@ GAME_DATA.DIALOG = {
     'responses': [2011]
   },
   '2011': {
-    'speaker': 'Joana Boaventura',
+    'speaker': 'JOANA BOAVENTURA',
     'message': "I'M ADDING THE ARCHIVES NODE TO YOUR NETMAP. I'LL CONTACT YOU WHEN YOU ARE IN THE VICINITY OF THE NODE",
     'responses': [2012]
   },
@@ -689,7 +689,7 @@ GAME_DATA.DIALOG = {
     }
   },
   '2400': {
-    'speaker': 'Joana Boaventura',
+    'speaker': 'JOANA BOAVENTURA',
     'message': "AN EXPERIMENTAL PIECE OF SOFTWARE, ALONG WITH WHATEVER CREDITS YOU CAN FIND DURING THE MISSION.",
     'responses': [2401]
   },
@@ -699,7 +699,7 @@ GAME_DATA.DIALOG = {
     'responses': [2402]
   },
   '2402': {
-    'speaker': 'Joana Boaventura',
+    'speaker': 'JOANA BOAVENTURA',
     'message': "USE A BACKDOOR THROUGH THE P.E.D. FEDUCIARY NODE TO ACCESS OUR SYSADMIN ARCHIVES. THE ARCHIVES NODE LOCKED DOWN AFTER AN ABORTED CRASH ATTEMPT, AND WE NEED A FILE FROM THERE IMMEDIATELY.",
     'responses': [2009, 2403]
   },
@@ -867,7 +867,7 @@ GAME_DATA.DIALOG = {
 
   // Plays after Node: "EASTERN DISTRIBUTION SITE"
   '2104': {
-    'speaker': 'DISARRY',
+    'speaker': 'DISARRAY',
     'message': "HELLO AGAIN",
     'responses': [2105]
   },
@@ -877,7 +877,7 @@ GAME_DATA.DIALOG = {
     'responses': [2106]
   },
   '2106': {
-    'speaker': 'DISARRY',
+    'speaker': 'DISARRAY',
     'message': "NICE WORK ON THAT LAST NODE. I WAS JUST COMING TO CHECK IT OUT MYSELF. GUESS THE WORK HERE IS DONE.",
     'responses': [2107]
   },
@@ -887,7 +887,7 @@ GAME_DATA.DIALOG = {
     'responses': [2108]
   },
   '2108': {
-    'speaker': 'DISARRY',
+    'speaker': 'DISARRAY',
     'message': "WHAT DO I MEAN? I JUST TOOK CARE OF THE REST OF THE NODES IN THIS AREA. EVERYTHING'S TOTALLY CLEAN",
     'responses': [2109, 2110]
   },
@@ -902,7 +902,7 @@ GAME_DATA.DIALOG = {
     'responses': [-3] //?
   },
   '2111': {
-    'speaker': 'DISARRY',
+    'speaker': 'DISARRAY',
     'message': "LOOK, KID, I'M A MUCH BETTER HACKER THAN YOU ARE. IF I TELL YOU THEY'RE CLEAN, THEY'RE CLEAN. CHECK YOU LATER.",
     'responses': [2112]
   },
@@ -1605,7 +1605,7 @@ GAME_DATA.DIALOG = {
   
   // Plays when accessing the "Agora" Warez node
   '2236': {
-    'speaker': 'Minerva',
+    'speaker': 'MINERVA',
     'message': "I knew you'd be back - Glad to see your energy is still flowing. I have that software you've been dreaming about. Are you ready to enter the magic circle?",
     'responses': [2126, 1014] // 2126 = Show me what you've got; 1014 = No thanks.
   },
@@ -1650,7 +1650,7 @@ GAME_DATA.DIALOG = {
     
   // Plays after Node: "Sub-Station Gamma"
   '2242': {
-    'speaker': 'Joana Boaventura',
+    'speaker': 'JOANA BOAVENTURA',
     'message': "AGENT. I CAN SEE YOU'RE ABOUT TO ENTER OUR SYSADMIN ARCHIVES. THANK YOU FOR HANDLING THIS MISSIO. I WANTED TO GIVE YOU SOME ADVICE.",
     'responses': [2243]
   },
@@ -1660,7 +1660,7 @@ GAME_DATA.DIALOG = {
       'responses': [2244],
     },
       '2244': {
-        'speaker': 'Joana Boaventura',
+        'speaker': 'JOANA BOAVENTURA',
         'message': "IF YOU ARE SUCCESSFUL, WE WILL REWARD YOU WITH A COPY OF SOME NEW SOFTWARE THAT WE JUST DEVELOPED. I'M TOLD THAT'S THE PROPER WAY TO MOTIVATE PEOPLE SUCH AS YOURSELF.",
         'responses': [2245]
       },
@@ -1670,7 +1670,7 @@ GAME_DATA.DIALOG = {
           'responses': [2246],
         },
           '2246': {
-            'speaker': 'Joana Boaventura',
+            'speaker': 'JOANA BOAVENTURA',
             'message': "GOOD LUCK, AGENT.",
             'responses': [2247]
           },
@@ -1684,7 +1684,7 @@ GAME_DATA.DIALOG = {
 
   // Plays after Node: "S.A. Archives"
   '2248': {
-    'speaker': 'Joana Boaventura',
+    'speaker': 'JOANA BOAVENTURA',
     'message': "WELL DONE, AGENT. YOU HAVE ACCOMPLISHED YOUR TASK, AND I AM HAPPY TO FULFILL THE TERMS OF OUR AGREEMENT. PREPARE TO RECEIVE THE SOFTWARE WE PROMISED.",
     'responses': [2249]
   },
@@ -1797,7 +1797,7 @@ GAME_DATA.DIALOG = {
  
   // Plays after Node: "R&D Backup"
   '2267': {
-    'speaker': 'Joana Boaventura',
+    'speaker': 'JOANA BOAVENTURA',
     'message': "AGENT. I'M GLAD I FOUND YOU. WE'VE GOT A BIG PROBLEM HERE.",
     'responses': [2268]
   },
@@ -1807,7 +1807,7 @@ GAME_DATA.DIALOG = {
       'responses': [2269]
     },
       '2269': {
-        'speaker': 'Joana Boaventura',
+        'speaker': 'JOANA BOAVENTURA',
         'message': "WE'VE FOUND AN UNDOCUMENTED NODE REROUTING DATA TO OUR SYSTEM CORE. A SECURITY BREAK AT THIS LEVEL IS COMPLETELY UNACCEPTABLE. WHAT ARE YOU GOING TO DO ABOUT IT?",
         'responses': [2270]
       },
@@ -1817,7 +1817,7 @@ GAME_DATA.DIALOG = {
           'responses': [2271]
         },
           '2271': {
-            'speaker': 'Joana Boaventura',
+            'speaker': 'JOANA BOAVENTURA',
             'message': "IF YOU CAN BYPASS OUR SECURITY, WE'LL SET UP A LINK TO THE UNDOCUMENTED NODE FOR YOU. THAT SHOULD GIVE YOU ACCESS TO WHOEVER IS CAUSING THIS CHAOS.",
             'responses': [2272]
           },
@@ -1827,7 +1827,7 @@ GAME_DATA.DIALOG = {
               'responses': [2273]
             },
               '2273': {
-                'speaker': 'Joana Boaventura',
+                'speaker': 'JOANA BOAVENTURA',
                 'message': "BE WARNED, AGENT. THE SECURITY MEASURES IN OUR CORE ARE PARTICULARLY FIERCE. GOOD LUCK.",
                 'responses': [2274]
               },
@@ -1841,7 +1841,7 @@ GAME_DATA.DIALOG = {
  
   // Plays after Node: "System Core"
   '2275': {
-    'speaker': 'Joana Boaventura',
+    'speaker': 'JOANA BOAVENTURA',
     'message': "CONGRATULATIONS, AGENT. YOU'VE OPENED UP OUR SYSTEM. AS YOU CAN OBSERVE, WE'VE ESTABLISHED A LINK TO THAT MYSTERIOUS NODE. THERE IS A PROBLEM, HOWEVER.",
     'responses': [2276]
   },
@@ -1851,7 +1851,7 @@ GAME_DATA.DIALOG = {
       'responses': [2277]
     },
       '2277': {
-        'speaker': 'Joana Boaventura',
+        'speaker': 'JOANA BOAVENTURA',
         'message': "THE NODE HAS AN UNKNOWN SECURITY LEVEL. WE DON'T HAVE THE ACCESS CODES TO REACH IT. WITHOUT THOSE CODES, THE NODE IS INACCESSABLE.",
         'responses': [2278]
       },
@@ -1861,7 +1861,7 @@ GAME_DATA.DIALOG = {
           'responses': [2279]
         },
           '2279': {
-            'speaker': 'Joana Boaventura',
+            'speaker': 'JOANA BOAVENTURA',
             'message': "WE'LL MAINTAIN THE CURRENT LINK FOR YOU. GOOD LUCK AND THANK YOU, AGENT.",
             'responses': [2280]
           },
